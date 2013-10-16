@@ -3,7 +3,7 @@ package snowflake
 import (
 	"appengine"
 	"appengine/aetest"
-	"fmt"
+	_ "fmt"
 	"strconv"
 	"testing"
 	"time"
@@ -66,7 +66,7 @@ func TestFoo(t *testing.T) {
 			t.Errorf("Generate: %d > %d", lastSnow, sid)
 		}
 		lastSnow = sid
-		fmt.Println(sid)
+		//fmt.Println(sid)
 	}
 
 	sid, err = GenerateSameKey(c)
