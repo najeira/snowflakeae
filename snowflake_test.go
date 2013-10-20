@@ -24,10 +24,10 @@ func TestFoo(t *testing.T) {
 	}
 
 	tm := strconv.FormatInt(TimeMax, 2)
-	if len(tm) != int(64-RandomBit) {
+	if len(tm) != int(63-RandomBit) {
 		t.Errorf("invalid TimeMax: %s", tm)
 	}
-	if 1<<(64-RandomBit) != TimeMax+1 {
+	if 1<<(63-RandomBit) != TimeMax+1 {
 		t.Errorf("invalid TimeMax: %d", TimeMax)
 	}
 

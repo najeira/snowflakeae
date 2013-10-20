@@ -21,7 +21,7 @@ type Snowflake struct {
 
 func init() {
 	RandomMax = (1 << RandomBit) - 1
-	TimeMax = (1 << (64 - RandomBit)) - 1
+	TimeMax = (1 << (63 - RandomBit)) - 1
 	rand.Seed(time.Now().Unix())
 }
 
